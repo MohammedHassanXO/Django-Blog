@@ -5,4 +5,12 @@ from .models import post
 
 # Register your models here.
 
-admin.site.register(post) 
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['title', 'publish_date']
+    search_fields = ["title", 'content']
+
+
+
+
+
+admin.site.register(post,PostAdmin) 

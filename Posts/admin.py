@@ -8,8 +8,7 @@ from .models import post
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'publish_date']
     search_fields = ["title", 'content']
-
-
+    list_filter = ["author", "publish_date"]
 
 
 

@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from Posts.views import post_list, post_detail, add_post, edit_post
+from Posts.views import post_list, post_detail, add_post, edit_post, post_delete
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('blog/<int:post_id>', post_detail),
     path('blog/add', add_post ),
     path('blog/<int:post_id>/edit', edit_post),
+    path('blog/<int:post_id>/delete', post_delete),
 
 ]
 

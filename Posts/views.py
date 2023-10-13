@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import post
 from .forms import PostForm
 # Create your views here.
-
+'''
 def post_list(request):
     data = post.objects.all()
     return render(request, 'posts.html', {'posts':data})
@@ -41,4 +41,4 @@ def post_delete(request, post_id):
     data = post.objects.get(id=post_id)
     data.delete()
     return redirect('/blog/') 
-
+'''
